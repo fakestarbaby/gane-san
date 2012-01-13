@@ -16,7 +16,7 @@ task :tweet => :environment do
 
   schedules = Schedule.order(:reserved_at)
   unless schedules.select { |schedule| Time.now.seconds_since_midnight <= schedule.reserved_at.seconds_since_midnight && schedule.reserved_at.seconds_since_midnight <= 10.minutes.since.seconds_since_midnight }.blank?
-    sleep rand(inteterval_time).minutes
+    sleep rand(inteterval_time.to_i).minutes
 
     Twitter.configure do |config|
       config.consumer_key = consumer_key
