@@ -5,6 +5,7 @@ gem 'rails', '3.1.3'
 gem 'devise'
 gem 'jquery-rails'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_config'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
