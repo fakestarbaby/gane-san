@@ -3,9 +3,11 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 
 gem 'devise'
+gem 'get-twitter-oauth-token'
 gem 'jquery-rails'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'rails_config'
+gem 'twitter'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
