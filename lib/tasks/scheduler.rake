@@ -14,7 +14,8 @@ task :tweet => :environment do
     oauth_token_secret = Settings.twitter.oauth_token_secret
   end
 
-  if Schedule.where(:reserved_at => Time.now..10.minutes.since).exists?
+  schedules = Schedule.order(:reserved_at)
+  unless schedules.select { |schedule| Time.now.seconds_since_midnight <= schedule.reserved_at.seconds_since_midnight && schedule.reserved_at.seconds_since_midnight <= 10.minutes.since.seconds_since_midnight }.blank?
     sleep rand(inteterval_time).minutes
 
     Twitter.configure do |config|
