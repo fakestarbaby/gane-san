@@ -18,12 +18,12 @@ Gane San is simple twitter bot service on Heroku with Heroku Scheduler addons.
 
 5. Setting some Heroku config add.
 
-* ENABLE_USER_ID - This is your user record id.
-* INTERVAL_TIME - This is scheduled tweet interval time.
-* CONSUMER_KEY - Your twitter application's consumer_key.
-* CONSUMER_SECRET - Your twitter application's consumer_secret.
-* OAUTH_TOKEN - Your twitter bot account's oauth token.
-* OAUTH_TOKEN_SECRET - Your twitter bot account's oauth token secret.
+       * ENABLE_USER_ID - This is your user record id.
+       * INTERVAL_TIME - This is scheduled tweet interval time.
+       * CONSUMER_KEY - Your twitter application's consumer_key.
+       * CONSUMER_SECRET - Your twitter application's consumer_secret.
+       * OAUTH_TOKEN - Your twitter bot account's oauth token.
+       * OAUTH_TOKEN_SECRET - Your twitter bot account's oauth token secret.
 
 6. Heroku Scheduler addons added and setting.
        bundle exec rake tweet
